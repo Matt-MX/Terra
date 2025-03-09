@@ -26,6 +26,7 @@ include(":platforms:minestom:example")
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://maven.fabricmc.net") {
             name = "Fabric Maven"
         }

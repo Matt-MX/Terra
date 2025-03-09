@@ -56,11 +56,12 @@ public class AwfulBukkitHacks {
 
                     ResourceKey<Biome> delegateKey = ResourceKey.create(
                         Registries.BIOME,
-                        ResourceLocation.fromNamespaceAndPath("terra", NMSBiomeInjector.createBiomeID(pack, key))
+//                        ResourceLocation.fromNamespaceAndPath("terra", NMSBiomeInjector.createBiomeID(pack, key))
+                        ResourceLocation.withDefaultNamespace("warm_ocean")
                     );
 
-                    Reference<Biome> holder = biomeRegistry.register(delegateKey, platform, RegistrationInfo.BUILT_IN);
-                    Reflection.REFERENCE.invokeBindValue(holder, platform); // IMPORTANT: bind holder.
+//                    Reference<Biome> holder = biomeRegistry.register(delegateKey, platform, RegistrationInfo.BUILT_IN);
+//                    Reflection.REFERENCE.invokeBindValue(holder, platform); // IMPORTANT: bind holder.
 
                     platformBiome.getContext().put(new NMSBiomeInfo(delegateKey));
 
